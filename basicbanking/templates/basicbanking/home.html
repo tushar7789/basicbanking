@@ -1,0 +1,40 @@
+{% extends 'basicbanking/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'basicbanking/styles/home.css' %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="main" style="background-image: url('{% static "basicbanking/images/home.jpg" %}')";>
+        <div class="main__container">
+            <table class="tbl">
+                <thead class="tbl__header">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody class="tbl__body">
+                    {% for customer in customers %}
+                        <form action="{% url 'post-home' customer.id %}" method="POST" class="row__form">
+                            {% csrf_token %}
+                            <tr class="tbl__body__row">
+                                <td>{{ customer.id }}</td>
+                                <td>{{ customer.name }}</td>
+                                <td>{{ customer.email }}</td>
+                                <td>{{ customer.current_balance }}</td>
+                            </tr>
+                        </form>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block js %}
+    <script src="{% static 'basicbanking/js/home.js' %}" type="text/javascript"></script>
+{% endblock js %}

@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main__container{
+    position: absolute;
+    top: 80px;
+    height: auto;
+    width: 520px;
+    background: transparent;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background: rgba(97, 100, 105,0.7);
+}
+
+.container__item{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    padding: 0px 40px;
+}
+
+.field{
+    font-size: 13px;
+    width: 100%;
+    font-weight: 900;
+    color: white;
+}
+
+.value{
+    font-size: 22px;
+    width: 100%;
+    padding: 0px;
+    font-weight: 300;
+    color: white;
+}
+
+#amt{
+    color: white;
+}
+
+#transfer__text{
+    font-size: 13px;
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.transfer__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.form__item{
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    background: transparent;
+    padding: 0px 40px;
+}
+
+.form__item select{
+    font-size: 23px;
+    padding: 5px 0px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    background: rgba(97, 100, 105,0.7);
+    border: none;
+}
+
+.form__item input{
+    margin-top: 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 5px 10px;
+}
+
+.form__item__button{
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+#btn{
+    background: white;
+    font-size: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+    color: black;    
+}
+
+#btn:hover{
+    background: rgba(97, 100, 105);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+/* messages */
+#msg__div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.info{
+    font-size: 20px;
+    color: white;
+    padding: 10px 8px;
+    text-align: center;
+    background: rgba(245, 43, 7, 0.6);
+}

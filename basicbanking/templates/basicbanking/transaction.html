@@ -1,0 +1,44 @@
+{% extends 'basicbanking/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'basicbanking/styles/transaction.css' %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="main" style="background-image: url('{% static "basicbanking/images/home.jpg" %}')";>
+        <div class="main__container" id="transaction__main__id">
+            {% if msg %}
+                <div id="msg__div">
+                    <div class="info">
+                        {{ msg }}
+                    </div>
+                </div>
+            {% endif %}
+            <table class="tbl">
+                <thead class="tbl__header">
+                    <tr>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Amount Transfered</th>
+                        <th>Date-Time</th>
+                    </tr>
+                </thead>
+                <tbody class="tbl__body">
+                    {% for transaction in transactions %}
+                        <tr class="tbl__body__row">
+                            <td>{{ transaction.From }}</td>
+                            <td>{{ transaction.To }}</td>
+                            <td>{{ transaction.transaction_amt }}</td>
+                            <td>{{ transaction.datetime }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block js %}
+    <script src="{% static 'basicbanking/js/transaction.js' %}"></script>
+{% endblock %}

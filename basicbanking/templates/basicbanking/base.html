@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'basicbanking/styles/base.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    {% block styles %}{% endblock %}
+
+    <title>Basic Banking</title>
+</head>
+<body>
+    <nav class="navbar" id="nv">
+        <div class="logo__container">
+            <span id="logo">BanQing</span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="{% url 'home-page' %}">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="{% url 'transaction' 0 %}">Transactions</a>
+            </li>
+        </ul>
+    </nav>
+
+    {% block content%} {% endblock %}
+    {% block js %}{% endblock %}
+    <script src="{% static 'basicbanking/js/base.js' %}"></script> 
+</body>
+</html>

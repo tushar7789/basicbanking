@@ -1,0 +1,52 @@
+{% extends 'basicbanking/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'basicbanking/styles/customer.css' %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="main" style="background-image: url('{% static "basicbanking/images/home.jpg" %}')";>
+        <div class="main__container">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="container__item" id="msg__div">
+                        <div class="info">
+                            {{ message }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="container__item">
+                <span class="field">Name</span><span class="value">   {{ customer.name }}</span>
+            </div>
+            <div class="container__item">
+                <span class="field">Email</span><span class="value">   {{ customer.email }}</span>
+            </div>
+            <div class="container__item">
+                <span class="field">Balance</span><span class="value">   Rs.{{ customer.current_balance }}</span>
+            </div>
+            <div class="container__item">
+                <span class="field" id="transfer__text">Transfer Money : </span>
+            </div>
+            <form action="{% url 'transaction' customer.id%}" method='POST' class="transfer__form">
+                {% csrf_token %}
+                <div class="form__item">
+                    <span class="field">To:</span>
+                    <select name="customer__list" class="value">
+                        {% for c in customers %}
+                            <option value="{{ c.id }}">{{ c.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form__item">
+                    <span class="field">Amount:</span>
+                    <input type="text" name="amount" id="amt" class="value" value="{{ transaction_amt }}">
+                </div>
+                <div class="form__item__button">
+                    <input type="submit" id="btn" value="Transfer">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
