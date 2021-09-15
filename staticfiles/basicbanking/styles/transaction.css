@@ -59,6 +59,7 @@
 }
 
 #msg__div{
+    width: 45%;
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -116,6 +117,7 @@
     }
 
     #msg__div{
+        width: 22%;
         margin-top: 10px;
         display: flex;
         justify-content: center;
