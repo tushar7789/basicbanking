@@ -51,6 +51,7 @@
     box-sizing: border-box;
 }
 
+
 .navbar__item a{
     font-weight: 400;
     font-size: 1rem;
@@ -89,6 +90,7 @@
     .navbar__item a{
         font-size: 0.8rem;
     }
+
 }
 
 @media only screen and (max-width:340px){
@@ -102,7 +104,8 @@
     }
 
     .navbar__item a{
-        padding: 3px 10px;
+        padding: 3px 5px;
         font-size: 0.7rem;
+        margin: 0px 3px;
     }
 }

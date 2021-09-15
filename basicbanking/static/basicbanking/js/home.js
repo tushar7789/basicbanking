@@ -1,6 +1,5 @@
 window.onload = function OnLoad(){
-    document.getElementsByClassName("navbar__item")[0].style.borderBottom = "3px solid white";
-    document.getElementsByClassName("navbar__item")[0].style.borderTop = "3px solid white";
+    document.getElementsByClassName("navbar__item")[0].firstElementChild.style.textDecoration = "underline";
 }
 
 function form__submit(){
