@@ -142,11 +142,19 @@
         font-size: 0.4rem;
         margin-left: 5px;
     }
+
+    .foot__container__item #dot{
+        margin-left: 5px;
+    }
 }
 
 @media only screen and (max-width: 600px){
     .foot{
         width: 30%;
+    }
+
+    .foot__container__item #dot{
+        margin-left: 5px;
     }
 }
 
@@ -183,7 +191,11 @@
         padding: 2px;
         border-radius: 10%;
         font-size: 0.4rem;
-        margin-left: 5px;
+        margin-left: 3px;
+    }
+
+    .foot__container__item #dot{
+        margin-left: 3px;
     }
 }
 
@@ -219,5 +231,35 @@
         border-radius: 10%;
         font-size: 0.3rem;
         margin-left: 3px;
+    }
+
+    .foot__container__item #dot{
+        margin-left: 3px;
+    }
+}
+
+@media only screen and (max-width: 270px){
+    .foot{
+        width: 40%;
+        height: 20px;
+    }
+
+    .foot__container__item .text{
+        font-size: 0.25rem;
+    }
+
+    .linked__in__logo{
+        width: 10px;
+        height: 10px;
+        padding: 2px;
+        border-radius: 10%;
+        font-size: 0.25rem;
+        margin-left: 2px;
+    }
+
+    .foot__container__item #dot{
+        margin-left: 2px;
+        width: 2px;
+        height: 2px;
     }
 }
