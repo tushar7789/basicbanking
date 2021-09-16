@@ -67,9 +67,86 @@
     border-radius: 4px;
 }
 
+.foot{
+    width: 25%;
+    height: 30px;
+    background: rgba(97, 100, 105,0.4);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.foot__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot__container__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot__container__item #dot{
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.foot__container__item .text{
+    font-size: 0.8rem;
+    color: white;
+}
+
+.linked__in__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: white;
+    padding: 3px;
+    color: black;
+    border: 1px solid white;
+    border-radius: 10%;
+    font-size: 0.7rem;
+    margin-left: 10px;
+}
+
+.linked__in__logo a{
+    text-decoration: none;
+    color: black;
+}
+
 @media only screen and (max-width: 768px ){
     .navbar__menu{
         margin-right: 20px;
+    }
+
+    .foot__container__item .text{
+        font-size: 0.5rem;
+    }
+
+    .linked__in__logo{
+        width: 15px;
+        height: 15px;
+        padding: 2px;
+        border-radius: 10%;
+        font-size: 0.4rem;
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .foot{
+        width: 30%;
     }
 }
 
@@ -91,6 +168,23 @@
         font-size: 0.8rem;
     }
 
+    .foot{
+        width: 30%;
+        height: 25px;
+    }
+
+    .foot__container__item .text{
+        font-size: 0.4rem;
+    }
+
+    .linked__in__logo{
+        width: 15px;
+        height: 15px;
+        padding: 2px;
+        border-radius: 10%;
+        font-size: 0.4rem;
+        margin-left: 5px;
+    }
 }
 
 @media only screen and (max-width:340px){
@@ -107,5 +201,23 @@
         padding: 3px 5px;
         font-size: 0.7rem;
         margin: 0px 3px;
+    }
+
+    .foot{
+        width: 35%;
+        height: 20px;
+    }
+
+    .foot__container__item .text{
+        font-size: 0.3rem;
+    }
+
+    .linked__in__logo{
+        width: 10px;
+        height: 10px;
+        padding: 2px;
+        border-radius: 10%;
+        font-size: 0.3rem;
+        margin-left: 3px;
     }
 }
