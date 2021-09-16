@@ -21,6 +21,8 @@ function my(){
 
 document.getElementsByClassName("main")[0].addEventListener("scroll", my);
 
-
-
+var fixed = document.querySelector(".foot"),
+    distanceFromTop = fixed.getBoundingClientRect().top;
+fixed.style.top = distanceFromTop + 'px';
+fixed.style.bottom = 'auto';
 
